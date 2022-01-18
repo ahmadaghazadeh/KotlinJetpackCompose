@@ -23,7 +23,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             KotlinJetpackComposeSamplesTheme {
-                BizCard("TEST")
+                //BizCard()
             }
         }
     }

@@ -26,7 +26,7 @@ import androidx.compose.ui.unit.dp
 import com.example.kotlinjetpackcomposesamples.R
 
 @Composable
-fun BizCard(name: String) {
+fun BizCard() {
     val buttonClickedState= remember {
         mutableStateOf(value = false)
     }
@@ -156,5 +156,5 @@ private fun CreateImageProfile(modifier: Modifier=Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    BizCard("Android")
+    BizCard()
 }
