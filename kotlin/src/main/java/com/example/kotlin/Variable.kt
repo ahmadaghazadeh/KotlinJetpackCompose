@@ -25,7 +25,7 @@ fun main(){
 }
 
 fun listSample(){
-    val myListOfNames= listOf("Ahmad","Ali","Mohammad")
+    val myListOfNames= listOf("Ahmad","Ali","Mohammad","ali")
     val myMutableListOfNames= mutableListOf("Ahmad","Ali","Mohammad")
 
     myMutableListOfNames.add("Ali 2")
@@ -50,6 +50,13 @@ fun listSample(){
     myMapOfNames["Next"] = 5
     if("Up" in myMapOfNames) println("Up in map")
     if(4 in myMapOfNames.values) println("4 in map")
+
+    var emptyList= emptyList<String>()
+
+    val startWithA=myListOfNames.filter {
+        it.startsWith("A",ignoreCase = true)
+    }
+    println(startWithA)
 }
 
 fun enhancedMassage(message:String,funAsParameter:(String)->Int){
