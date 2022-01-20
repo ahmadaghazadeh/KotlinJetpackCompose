@@ -3,6 +3,7 @@ package com.example.kotlin
 fun main(){
     val car=Car("","")
     car.drive()
+    println("Hiii ".append("Ahmad"))
 
 }
 
@@ -32,3 +33,6 @@ interface ClickEvent{
     fun onClick(message:String)
 }
 
+fun String.append(toAppend: String):String{
+    return this.plus(toAppend)
+}

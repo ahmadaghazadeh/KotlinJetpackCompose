@@ -2,10 +2,12 @@ package com.example.kotlinjetpackcomposesamples
 
 import android.content.SharedPreferences
 
-fun SharedPreferences.edit(
+inline fun SharedPreferences.edit(
     commit:Boolean=false,
+    noinline action1:Int.()->Unit={},
     action:SharedPreferences.Editor.()->Unit
 ){
+    myFunction(action1)
     val  editor=edit()
     action(editor)
     if (commit){
@@ -14,6 +16,18 @@ fun SharedPreferences.edit(
         editor.apply()
     }
 }
+
+fun myFunction( action1:Int.()->Unit){
+    action1(-1)
+}
+
+val add:(Int,Int)->Int= {a,b-> a+b}
+
+
+fun sum(a:Int,b:Int):Int{
+    return a+b
+}
+
 
 private  const val KEY_TOKEN="token"
 
